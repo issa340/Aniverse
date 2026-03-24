@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <ul>
+
+            <!-- Icône panier -->
+            <li class="panier">
+                <a href="panier.html">
+                    <img src="img/panier.png" alt="Panier" style="width:28px">
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+
+            <!-- Icône compte -->
+            <li class="account">
+                <a href="login.html">
+                    <img src="img/icon.png" alt="Compte" class="account-icon">
+                </a>
+            </li>
+
+            <!-- Logo -->
+            <img src="img/Aniverse.logo.png" alt="logo" style="width:40px;">
+            <li class="logo"><a href="index.html">ANIVERSE</a></li>
+
+        </ul>
+    </div>
+
+    <!-- TITRE -->
+    <h1 style="text-align:center; color:white; margin-top:30px;">Votre panier</h1>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="cart-container">
+
+        <!-- PANIER GAUCHE -->
+        <div class="cart-left">
+            <h2>Articles</h2>
+            <div id="cart-items">
+                <!-- Les produits seront injectés ici par panier.js -->
+            </div>
+        </div>
+
+        <!-- PAIEMENT À DROITE -->
+        <div class="cart-right">
+
+            <h2>Total & Paiement</h2>
+
+            <p class="total">Total : <span id="grand-total">0,00€</span></p>
+
+            <div class="payment-options">
+                <h3>Moyens de paiement</h3>
+
+                <label><input type="radio" name="pay" checked> Carte Bancaire</label><br>
+                <label><input type="radio" name="pay"> PayPal</label><br>
+                <label><input type="radio" name="pay"> Apple Pay</label><br>
+                <label><input type="radio" name="pay"> Google Pay</label><br>
+
+                <button class="pay-btn">Procéder au paiement</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="panier.js"></script>
+
+</body>
+</html>

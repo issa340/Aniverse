@@ -1,0 +1,405 @@
+/* Définition de la couleur de fond du corps de la page */
+body {
+    background-color: #111;
+}
+
+/* Style des éléments de liste (li) utilisés dans la navigation */
+li {
+    float: right;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Style des liens à l'intérieur des éléments de liste */
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Effet de survol pour les liens */
+li a:hover {
+    background-color: rgb(255, 60, 0);
+    border-radius: 8px;
+}
+
+/* Style générique pour les liens (hors menu) */
+a {
+    display: block;
+    padding: 8px;
+    background-color: transparent;
+}
+
+/* Suppression des puces, marges et padding pour les listes de navigation */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Positionnement du logo à gauche dans la barre de navigation */
+.logo {
+    float: left;
+}
+
+/* Applique le modèle de boîte "border-box" à tous les éléments */
+* {
+    box-sizing: border-box;
+}
+
+/* Conteneur du diaporama / carrousel */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto; /* centre horizontalement */
+}
+
+/* Masque tous les slides par défaut */
+.mySlides {
+    display: none;
+}
+
+/* Style commun aux boutons "précédent" et "suivant" */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Positionnement du bouton "suivant" à droite */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Effet de survol sur les boutons de navigation */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Texte affiché sur les slides */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+}
+
+/* Animation fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Responsive slideshow */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px;
+    }
+}
+
+/* Ligne horizontale */
+hr.rounded {
+    border-top: 3px solid #9DACFF;
+    border-radius: 5px;
+    size: 10px;
+}
+
+/* Titre "En tendance" */
+.trending {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Colonnes */
+.column {
+    float: left;
+    width: 16.665%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Clearfix */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ABOUT US */
+.A {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Effet zoom images */
+.column img {
+    transition: transform 0.3s ease;
+}
+
+.column img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.panier {
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    float: right;
+    padding: 10px 16px;
+}
+
+.search-bar input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff3c00;
+}
+
+.results-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background-color: #111;
+    border-radius: 8px;
+    z-index: 1000;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mise en grille */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cartes */
+.card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Compte */
+.account {
+    list-style: none;
+    margin-right: 6px;
+}
+
+.account-icon {
+    margin-top: -3px;
+    width: 32px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    transition: 0.3s;
+}
+
+.account-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Bouton ajouter */
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6b81;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff345a;
+    transform: scale(1.05);
+}
+
+.card p.title {
+    color: white;
+    font-size: 16px;
+    margin: 5px 0 0;
+    text-align: center;
+}
+
+.card p.price {
+    color: #00c853;
+    font-weight: bold;
+    margin: 2px 0 8px;
+    text-align: center;
+}
+
+.cart-container {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    color: white;
+}
+
+.cart-left {
+    width: 60%;
+    background: #141414;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.cart-right {
+    width: 40%;
+    background: #141414;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    background: #1b1b1b;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.cart-image {
+    width: 110px;
+    border-radius: 8px;
+}
+
+.quantity {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.quantity button {
+    background: #ff2b5f;
+    border: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pay-btn {
+    margin-top: 20px;
+    background: #ff2b5f;
+    padding: 12px 20px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+/* Disposition image + résumé */
+.z, .o, .n {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 100px 50px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Images */
+.image-histoire img,
+.image-histoir img,
+.image-histoi img {
+    border-radius: 8px;
+}
+
+/* Adaptations */
+.image-histoire img { width: 400px; margin-top: 43px; margin-left: 180px; }
+.image-histoir img { width: 500px; margin-top: 43px; margin-left: 180px; }
+.image-histoi img { width: 310px; margin-top: 25px; margin-left: 30px; }
+
+/* Textes */
+.texte-histoire, .texte-histoir, .texte-histoi {
+    max-width: 900px;
+}
+
+.texte-histoire p, .texte-histoir p, .texte-histoi p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ------------------------------ */
+/*       BADGE PANIER AJOUTÉ      */
+/* ------------------------------ */
+
+.cart-icon-wrapper {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-count.active {
+    display: flex;
+}

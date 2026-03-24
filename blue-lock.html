@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+    </style>
+    <title>Blue Lock – Détail</title>
+
+    <style>
+        .product-page {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            color: white;
+        }
+
+        .product-page img {
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        .product-info h1 {
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .synopsis {
+            font-size: 17px;
+            margin: 20px 0;
+            opacity: 0.9;
+        }
+
+        .buy-button {
+            background: #ff3b5c;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .buy-button:hover {
+            opacity: 0.85;
+        }
+
+        body {
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul>
+
+
+            <li class="panier">
+                <a href="panier.html">
+                    <img src="img/panier.png" alt="Panier" style="width:28px">
+                </a>
+            </li>
+
+            <li class="account">
+                <a href="login.html">
+                    <img src="img/icon.png" alt="Compte" class="account-icon">
+                </a>
+            </li>
+
+            <img src="img/Aniverse.logo.png" alt="" class="logo" style="width: 40px;">
+
+            <li class="logo"><a href="#aniverse">ANIVERSE</a></li>
+        </ul>
+
+        <li class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher..." />
+            <span class="search-icon" style="cursor:pointer;">🔍</span>
+        </li>
+    </div>
+
+<div class="product-page">
+
+    <!-- IMAGE DU PRODUIT -->
+    <div>
+        <img src="img/bluelock1.jpg" alt="Blue Lock Tome 16">
+    </div>
+
+    <!-- INFORMATIONS PRODUIT -->
+    <div class="product-info">
+
+        <h1>Blue Lock — Tome 16</h1>
+
+        <div class="price">7,99€</div>
+
+        <div class="synopsis">
+            Le projet Blue Lock continue de pousser les joueurs au-delà de leurs limites.  
+            Isagi, désormais au cœur d’un match d’une intensité folle, doit surpasser tous ses rivaux 
+            pour prouver qu’il possède l’instinct du buteur ultime.  
+            Stratégies, tensions et affrontements explosifs rythment ce tome indispensable.
+        </div>
+
+        <button class="buy-button">Ajouter au panier 🛒</button>
+
+        <br><br>
+
+        <p><strong>📦 Livraison gratuite</strong> dès 7€</p>
+        <p><strong>↩️ Retour 30 jours</strong> après achat</p>
+    </div>
+
+</div>
+
+</body>
+</html>
