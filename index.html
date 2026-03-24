@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+    </style>
+
+    <title>Aniverse</title>
+</head>
+<body>
+    
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <ul>
+
+            <!-- PANIER AVEC BADGE -->
+            <li class="panier">
+                <a href="panier.html">
+                    <img src="panier.png" alt="Panier" style="width:28px">
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+
+            <li class="account">
+                <a href="login.html">
+                    <img src="icon.png" alt="Compte" class="account-icon">
+                </a>
+            </li>
+
+            <img src="Aniverse.logo.png" alt="" class="logo" style="width: 40px;">
+            <li class="logo"><a href="#aniverse">ANIVERSE</a></li>
+        </ul>
+
+        <li class="search-bar">
+            <form onsubmit="searchAnime(event)">
+                <input id="searchInput" type="text" placeholder="Rechercher un anime..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </li>
+
+        <div id="resultsContainer" style="color:white; padding:10px;"></div>
+
+        <!-- Slideshow -->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <a href="dragonballz.html">
+                        <img src="dbz.jpg" alt="Dragon Ball Z" style="width: 100%;">
+                    </a>
+                    <div class="text">DRAGON BALL Z</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="onepiece.html">
+                        <img src="onepiece1.jpg" alt="One Piece" style="width: 100%;">
+                    </a>
+                    <div class="text">ONE PIECE</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <a href="naruto.html">
+                        <img src="NarutoShippuden.webp" alt="Naruto Shippuden" style="width: 100%;">
+                    </a>
+                    <div class="text">NARUTO SHIPPUDEN</div>
+                </div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+        </div>
+
+        <hr class="rounded">
+
+        <h1 class="trending">| EN TENDANCE</h1>
+
+        <!-- ROW 1 -->
+        <div class="row">
+
+            <div class="card">
+                <a href="sololeveling.html">
+                    <img src="solo2.jpg" alt="Solo Leveling">
+                </a>
+                <p class="title">Solo Leveling</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="bleach.html">
+                    <img src="bleach2.jpg" alt="Bleach">
+                </a>
+                <p class="title">Bleach</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="demonslayer.html">
+                    <img src="demonslayer2.jpg" alt="Demon Slayer">
+                </a>
+                <p class="title">Demon Slayer</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="jujutsu-kaisen.html">
+                    <img src="jjk4.jpg" alt="Jujutsu Kaisen">
+                </a>
+                <p class="title">Jujutsu Kaisen</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="mha.html">
+                    <img src="mha1.jpg" alt="My Hero Academia">
+                </a>
+                <p class="title">My Hero Academia</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="onepunchman.html">
+                    <img src="opm1.jpg" alt="One Punch Man">
+                </a>
+                <p class="title">One Punch Man</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="row">
+
+            <div class="card">
+                <a href="hunterxhunter.html">
+                    <img src="hunter1.jpg" alt="Hunter X Hunter">
+                </a>
+                <p class="title">Hunter X Hunter</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="titan.html">
+                    <img src="titan1.jpg" alt="L'Attaque des Titans">
+                </a>
+                <p class="title">L'Attaque des Titans</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="blue-lock.html">
+                    <img src="bluelock1.jpg" alt="Blue Lock">
+                </a>
+                <p class="title">Blue Lock</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="haikyuu.html">
+                    <img src="haikyuu2.jpg" alt="Haikyuu">
+                </a>
+                <p class="title">Haikyuu</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="kuroko-basket.html">
+                    <img src="basket2.jpg" alt="Kuroko's Basket">
+                </a>
+                <p class="title">Kuroko's Basket</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+            <div class="card">
+                <a href="black-clover.html">
+                    <img src="black1.jpg" alt="Black Clover">
+                </a>
+                <p class="title">Black Clover</p>
+                <p class="price">7,99 €</p>
+                <button class="add-to-cart">Ajouter au panier</button>
+            </div>
+
+        </div>
+
+        <script>
+function searchAnime(event) {
+    event.preventDefault();
+
+    let query = document.getElementById("searchInput").value.toLowerCase().trim();
+    query = query.replace(/[-_]/g, " ");
+
+    if (query.includes("one piece")) window.location.href = "onepiece.html";
+    else if (query.includes("dragon ball z") || query.includes("dbz")) window.location.href = "dragonballz.html";
+    else if (query.includes("naruto")) window.location.href = "naruto.html";
+    else if (query.includes("solo leveling")) window.location.href = "sololeveling.html";
+    else if (query.includes("bleach")) window.location.href = "bleach.html";
+    else if (query.includes("demon slayer")) window.location.href = "demonslayer.html";
+    else if (query.includes("jujutsu") || query.includes("jjk")) window.location.href = "jujutsu-kaisen.html";
+    else if (query.includes("mha") || query.includes("my hero")) window.location.href = "mha.html";
+    else if (query.includes("one punch")) window.location.href = "onepunchman.html";
+    else if (query.includes("hunter")) window.location.href = "hunterxhunter.html";
+    else if (query.includes("titan") || query.includes("snk") || query.includes("aot")) window.location.href = "titan.html";
+    else if (query.includes("blue lock") || query.includes("bluelock")) window.location.href = "blue-lock.html";
+    else if (query.includes("haikyuu")) window.location.href = "haikyuu.html";
+    else if (query.includes("kuroko")) window.location.href = "kuroko-basket.html";
+    else if (query.includes("black clover")) window.location.href = "black-clover.html";
+    else alert("Aucun résultat trouvé.");
+}
+        </script>
+
+        <div class="Subscribe">
+            <h1 class="A">ABOUT ME</h1>
+            <h3 class="A"><a href="">subscribe now</a></h3>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
